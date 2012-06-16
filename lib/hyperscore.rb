@@ -7,3 +7,4 @@ module Hyperscore
 end
 
 require_relative 'hyperscore/client'
+require_relative 'hyperscore/coercions'

@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = Hyperscore::VERSION
   
   gem.add_runtime_dependency "hyperclient"
+  gem.add_runtime_dependency "virtus"
   
   gem.add_development_dependency "pry"
 end
