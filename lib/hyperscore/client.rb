@@ -1,3 +1,5 @@
+require 'hyperclient'
+
 module Hyperscore
   
   class Client
@@ -16,10 +18,6 @@ module Hyperscore
   
     def games
       links.games.resources.games
-    end
-  
-    def add_game(name)
-      links.feeds.links.submissions.post({name: name})
     end
   
     def motd
