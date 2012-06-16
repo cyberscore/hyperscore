@@ -1,15 +1,20 @@
 require 'hyperclient'
 
+require_relative 'coercions'
+
 module Hyperscore
   
   class Client
     include Hyperclient
   
-    entry_point 'http://cs-api.heroku.com/api/'
+    #entry_point 'http://cs-api.heroku.com/api/'
+    entry_point 'http://cyberscore.dev/api'
     
     def news
       links.news.resources.news.map do |news|
-        Hyperscore::Coercions::News.new( news.attributes )
+        Hyperscore::Coercions::News.new( news.attributes.merge({
+          :source => news.url
+        }) )
       end
     end
   
