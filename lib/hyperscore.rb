@@ -5,8 +5,6 @@ require 'bundler/setup'
 
 require "hyperscore/version"
 
-module Hyperscore
-  # Your code goes here...
-end
+module Hyperscore; end
 
 require_relative 'hyperscore/client'
